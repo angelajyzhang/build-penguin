@@ -42,15 +42,23 @@
       border-radius: 10px;
       width: 40%;
       display: flex;
-      flex-basis: 50%;
+      overflow: hidden;
+    }
+
+    #cover {
+      flex: 1;
+      min-width: 0;
     }
 
     img {
       border-radius: 10px 0px 0px 10px;
+      object-fit: cover;
+      display: block;
     }
 
     #prod-info {
-      padding: 10%;
+      flex: 1;
+      min-width: 0;
     }
 
     #tag {
@@ -63,11 +71,11 @@
       color: black;
       font-family: "Fraunces";
       font-weight: 700;
-      font-size: 30px;
+      font-size: 32px;
     }
 
     .divide {
-      margin-top: 5%;
+      margin-top: 8%;
     }
 
     #prices {
@@ -87,10 +95,25 @@
       background-color: hsl(158, 36%, 37%);
       color: white;
       width: 100%;
-      padding: 3%;
+      padding: 5%;
       border-radius: 5px;
       border-width: 0;
       font-family: "Montserrat";
+    }
+
+    #desc {
+      color: hsl(228, 12%, 48%);
+      line-height: 1.5;
+    }
+
+    #padding {
+      padding: 10%;
+    }
+
+    #button-div {
+      display: flex;
+      justify-content: center;
+      gap: 5%;
     }
   </style>
 </head>
@@ -102,22 +125,26 @@
     </div>
 
     <div id="prod-info">
-      <div class="divide" id="tag">Perfume</div>
+      <div id="padding">
+        <div class="divide" id="tag">Perfume</div>
 
-      <div class="divide" id="prod-name">Gabrielle Essence Eau De Parfum</div>
+        <div class="divide" id="prod-name">Gabrielle Essence Eau De Parfum</div>
 
-      <div class="divide" id="desc">A floral, solar and voluptuous interpretation composed by Olivier Polge,
-        Perfumer-Creator for the House of CHANEL.</div>
+        <div class="divide" id="desc">A floral, solar and voluptuous interpretation composed by Olivier Polge,
+          Perfumer-Creator for the House of CHANEL.</div>
 
-      <div class="divide" id="prices">
-        <div id="price">$149.99</div>
-        <div style="text-decoration: line-through; color: hsl(228, 12%, 48%);">$169.99</div>
+        <div class="divide" id="prices">
+          <div id="price">$149.99</div>
+          <div style="text-decoration: line-through; color: hsl(228, 12%, 48%);">$169.99</div>
+        </div>
+
+        <button class="divide">
+          <divide id="button-div">
+            <div><img src="images/icon-cart.svg" alt="cart icon"></div>
+            <div style="font-weight: 700;">Add to Cart</div>
+          </div>
+        </button>
       </div>
-
-      <button class="divide"> 
-        <img src="images/icon-cart.svg" alt="cart icon">
-        Add to Cart
-      </button>
     </div>
   </div>
 </body>
